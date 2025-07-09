@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 
 from blog.models import Post
+from blog.models import Project
 
 faker = FakerFactory.create()
 
@@ -32,7 +33,18 @@ class PostFactory(factory.django.DjangoModelFactory):
     created_on = factory.LazyAttribute(lambda x: now())
     author = factory.SubFactory(UserFactory)
     status = 0
-
-
     class Meta:
         model = Post
+
+class ProjectFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Project
+
+    title = factory.Faker("sentence", nb_words=3)
+    description = factory.Faker("paragraph")
+    url = factory.Faker("url")
+    is_published = factory.Faker("boolean")
+
+
+#    class Meta:
+#        model = Post
