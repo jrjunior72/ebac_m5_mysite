@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -8,7 +9,7 @@ class Project(models.Model):
     is_published = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-created_at']
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.title

@@ -1,6 +1,7 @@
 from django.test import TestCase
 from blog.factories import ProjectFactory
 
+
 class ProjectFactoryTest(TestCase):
     def setUp(self):
         self.project = ProjectFactory()

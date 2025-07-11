@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ebac_m5_mysite.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ebac_m5_mysite.settings")
 
 application = get_wsgi_application()
