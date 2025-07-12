@@ -13,3 +13,6 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Project)
+admin.site.register(Post, PostAdmin)
+
+
